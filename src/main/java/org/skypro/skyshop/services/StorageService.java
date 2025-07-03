@@ -1,17 +1,14 @@
-package model.services;
+package org.skypro.skyshop.services;
 
 
-import com.sun.source.tree.Tree;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.TreeMap;
 import java.util.UUID;
-import model.article.Article;
-import model.product.DiscontedProduct;
-import model.product.FixPriceProduct;
-import model.product.Product;
-import model.product.SimpleProduct;
-import model.search.Searchable;
+import org.skypro.skyshop.model.article.Article;
+import org.skypro.skyshop.model.product.DiscontedProduct;
+import org.skypro.skyshop.model.product.FixPriceProduct;
+import org.skypro.skyshop.model.product.Product;
+import org.skypro.skyshop.model.product.SimpleProduct;
 import org.springframework.stereotype.Service;
 
 @Service

@@ -1,9 +1,8 @@
-package model.article;
+package org.skypro.skyshop.model.article;
 
 import java.util.Objects;
 import java.util.UUID;
-import model.search.Searchable;
-import org.springframework.stereotype.Component;
+import org.skypro.skyshop.model.search.Searchable;
 
 public class Article implements Searchable {
 

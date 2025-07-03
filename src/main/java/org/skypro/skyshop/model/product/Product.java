@@ -1,11 +1,9 @@
-package model.product;
+package org.skypro.skyshop.model.product;
 
-import java.rmi.server.UID;
 import java.util.Objects;
 import java.util.UUID;
-import model.search.Searchable;
+import org.skypro.skyshop.model.search.Searchable;
 import java.lang.String;
-import org.springframework.stereotype.Component;
 
 public abstract class Product implements Searchable {
 

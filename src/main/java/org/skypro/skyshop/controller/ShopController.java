@@ -1,9 +1,9 @@
-package controller;
+package org.skypro.skyshop.controller;
 
 import java.util.Collection;
-import model.article.Article;
-import model.product.Product;
-import model.services.StorageService;
+import org.skypro.skyshop.model.article.Article;
+import org.skypro.skyshop.model.product.Product;
+import org.skypro.skyshop.services.StorageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
