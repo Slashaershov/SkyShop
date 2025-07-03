@@ -1,8 +1,10 @@
 package org.skypro.skyshop.model.article;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Objects;
 import java.util.UUID;
 import org.skypro.skyshop.model.search.Searchable;
+import org.springframework.stereotype.Component;
 
 public class Article implements Searchable {
 
@@ -27,9 +29,15 @@ public class Article implements Searchable {
   }
 
   @Override
+  public String getName() {
+    return name;
+  }
+
+  @Override
   public String searchTerm() {
     return name + ". " + text;
   }
+
 
   @Override
   public String getType() {

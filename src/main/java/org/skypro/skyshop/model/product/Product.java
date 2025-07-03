@@ -1,9 +1,11 @@
 package org.skypro.skyshop.model.product;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Objects;
 import java.util.UUID;
 import org.skypro.skyshop.model.search.Searchable;
 import java.lang.String;
+import org.springframework.stereotype.Component;
 
 public abstract class Product implements Searchable {
 
@@ -23,6 +25,7 @@ public abstract class Product implements Searchable {
     return id;
   }
 
+  @Override
   public String getName() {
     return name;
   }
