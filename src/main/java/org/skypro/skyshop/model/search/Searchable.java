@@ -3,7 +3,6 @@ package org.skypro.skyshop.model.search;
 import  java.util.UUID;
 import org.springframework.stereotype.Component;
 
-@Component
 public interface Searchable {
 
   String searchTerm();
