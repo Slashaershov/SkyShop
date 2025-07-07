@@ -27,9 +27,9 @@ public class StorageService {
 
   public StorageService() {
     this.products = new HashMap<>();
-    fillProduct(products);
+    fillProduct();
     this.articles = new HashMap<>();
-    fillArticles(articles);
+    fillArticles();
   }
 
   public Collection<Article> getArticles() {
@@ -47,26 +47,26 @@ public class StorageService {
     return res;
   }
 
-  private void fillProduct(Map<UUID, Product> products) {
-    UUID uuid = UUID.randomUUID();
-    products.put(uuid, new SimpleProduct("t-short blue", 120, uuid));
-    uuid = UUID.randomUUID();
-    products.put(uuid, new SimpleProduct("t-short red", 130, uuid));
-    uuid = UUID.randomUUID();
-    products.put(uuid, new FixPriceProduct("soks red Big", uuid));
-    uuid = UUID.randomUUID();
-    products.put(uuid, new FixPriceProduct("soks red Small", uuid));
-    uuid = UUID.randomUUID();
-    products.put(uuid, new DiscontedProduct("gredy red shorts  ", 100, 20, uuid));
-    uuid = UUID.randomUUID();
-    products.put(uuid, new DiscontedProduct("redy for life red shorts ", 200, 15, uuid));
+  private void fillProduct() {
+    putProduct(new SimpleProduct("t-short blue", 120));
+    putProduct(new SimpleProduct("t-short red", 130));
+    putProduct(new FixPriceProduct("soks red Big"));
+    putProduct(new FixPriceProduct("soks red Small"));
+    putProduct(new DiscontedProduct("gredy red shorts  ", 100, 20));
+    putProduct(new DiscontedProduct("redy for life red shorts ", 200, 15));
   }
 
-  private void fillArticles(Map<UUID, Article> articles) {
-    UUID uuid = UUID.randomUUID();
-    articles.put(uuid, new Article("shorts life", "some text", uuid));
-    uuid = UUID.randomUUID();
-    articles.put(uuid, new Article("soks red life", "some text red", uuid));
+  private void putProduct(Product newProduct) {
+    products.put(newProduct.getId(), newProduct);
+  }
+
+  private void fillArticles() {
+    putArticle(new Article("shorts life", "some text"));
+    putArticle(new Article("soks red life", "some text red"));
+  }
+
+  private void putArticle(Article newArticle) {
+    articles.put(newArticle.getId(), newArticle);
   }
 }
 

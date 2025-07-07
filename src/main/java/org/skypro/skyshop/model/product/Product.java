@@ -12,12 +12,12 @@ public abstract class Product implements Searchable {
   private final UUID id;
   private String name;
 
-  public Product(String name, UUID id) {
+  public Product(String name) {
     if (name == null || name.isBlank()) {
       throw new IllegalArgumentException("name is null or empty");
     }
     this.name = name;
-    this.id = id;
+    this.id = UUID.randomUUID();;
   }
 
   @Override

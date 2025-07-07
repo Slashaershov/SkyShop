@@ -7,8 +7,8 @@ public class SimpleProduct extends Product {
 
   private int price;
 
-  public SimpleProduct(String name, int price, UUID id) {
-    super(name, id);
+  public SimpleProduct(String name, int price) {
+    super(name);
     if (price <= 0) {
       throw new IllegalArgumentException("cost <= 0");
     }

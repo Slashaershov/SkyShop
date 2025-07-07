@@ -8,9 +8,9 @@ public class DiscontedProduct extends Product
   private int basePrice;
   private int discount;
 
-  public DiscontedProduct(String name, int price, int discount, UUID id)
+  public DiscontedProduct(String name, int price, int discount)
   {
-    super(name, id);
+    super(name);
     if (price <= 0)
     {
       throw new IllegalArgumentException("cost <= 0");
