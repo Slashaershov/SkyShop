@@ -3,6 +3,7 @@ package org.skypro.skyshop.services;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
@@ -33,11 +34,11 @@ public class StorageService {
   }
 
   public Collection<Article> getArticles() {
-    return articles.values();
+    return Collections.unmodifiableCollection(articles.values());
   }
 
   public Collection<Product> getProducts() {
-    return products.values();
+    return Collections.unmodifiableCollection(products.values());
   }
 
   public Collection<Searchable> getAllSearchables() {
