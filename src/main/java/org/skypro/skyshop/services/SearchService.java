@@ -10,14 +10,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Service
 public class SearchService {
 
-  @Autowired
-  private final StorageService  storageService;
+  private final StorageService storageService;
 
   public SearchService(StorageService storageService) {
     this.storageService = storageService;
   }
 
-  public Collection<SearchResult> search (String str){
+  public Collection<SearchResult> search(String str) {
     return storageService.getAllSearchables().stream()
         .map(SearchResult::fromSearchable)
         .toList();

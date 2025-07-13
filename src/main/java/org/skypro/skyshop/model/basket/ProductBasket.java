@@ -20,7 +20,7 @@ public class ProductBasket {
     products.put(id, products.getOrDefault(id, 0) + 1);
   }
 
-  public Map<UUID, Integer> get() {
+  public Map<UUID, Integer> getAll() {
     return Collections.unmodifiableMap(products);
   }
 }

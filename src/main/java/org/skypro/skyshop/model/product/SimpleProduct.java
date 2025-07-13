@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 public class SimpleProduct extends Product {
 
-  private int price;
+  private final int price;
 
   public SimpleProduct(String name, int price) {
     super(name);

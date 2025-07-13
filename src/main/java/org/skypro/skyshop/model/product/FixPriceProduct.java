@@ -1,8 +1,5 @@
 package org.skypro.skyshop.model.product;
 
-import java.util.UUID;
-import org.springframework.stereotype.Component;
-
 public class FixPriceProduct extends Product {
 
   private final int FIX_PRICE = 20;

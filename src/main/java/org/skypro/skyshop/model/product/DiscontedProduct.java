@@ -5,8 +5,8 @@ import org.springframework.stereotype.Component;
 
 public class DiscontedProduct extends Product
 {
-  private int basePrice;
-  private int discount;
+  private final int basePrice;
+  private final  int discount;
 
   public DiscontedProduct(String name, int price, int discount)
   {

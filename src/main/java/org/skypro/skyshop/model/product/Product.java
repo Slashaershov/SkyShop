@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 public abstract class Product implements Searchable {
 
   private final UUID id;
-  private String name;
+  private final String name;
 
   public Product(String name) {
     if (name == null || name.isBlank()) {

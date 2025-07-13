@@ -48,6 +48,10 @@ public class StorageService {
     return res;
   }
 
+  public Optional<Product> getProductById(UUID id) {
+    return Optional.ofNullable(products.get(id));
+  }
+
   private void fillProduct() {
     putProduct(new SimpleProduct("t-short blue", 120));
     putProduct(new SimpleProduct("t-short red", 130));
