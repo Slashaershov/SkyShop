@@ -24,6 +24,7 @@ public class ShopController {
   private final StorageService storageService;
   private final SearchService searchService;
   private final BasketService basketService;
+
   @Autowired
   public ShopController() {
     storageService= new StorageService();
