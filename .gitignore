@@ -31,4 +31,5 @@ build/
 
 ### VS Code ###
 .vscode/
-.mvn/wrapper/maven-wrapper.properties
+/mvnw text eol=lf
+*.cmd text eol=crlf
