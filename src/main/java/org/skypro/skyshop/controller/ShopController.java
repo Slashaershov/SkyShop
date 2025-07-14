@@ -21,12 +21,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class ShopController {
 
+  private final StorageService storageService;
+  private final SearchService searchService;
+  private final BasketService basketService;
   @Autowired
-  private StorageService storageService;
-  @Autowired
-  private SearchService searchService;
-  @Autowired
-  private BasketService basketService;
+  public ShopController() {
+    storageService= new StorageService();
+    searchService= new SearchService(storageService);
+    basketService = new BasketService(storageService);
+  }
 
   @GetMapping("/products")
   public Collection<Product> getAllProducts() {
