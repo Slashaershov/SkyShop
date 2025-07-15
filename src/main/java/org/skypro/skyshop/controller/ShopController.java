@@ -25,11 +25,11 @@ public class ShopController {
   private final SearchService searchService;
   private final BasketService basketService;
 
-  @Autowired
-  public ShopController() {
-    storageService= new StorageService();
-    searchService= new SearchService(storageService);
-    basketService = new BasketService(storageService);
+  public ShopController(StorageService storageService, SearchService searchService,
+      BasketService basketService) {
+    this.storageService = storageService;
+    this.searchService = searchService;
+    this.basketService = basketService;
   }
 
   @GetMapping("/products")
@@ -38,11 +38,11 @@ public class ShopController {
   }
 
   @GetMapping("/basket/{id}")
-  public String addProduct(@PathVariable("id") UUID id)
-  {
+  public String addProduct(@PathVariable("id") UUID id) {
     basketService.add(id);
     return "Продукт успешно добавлен";
   }
+
 
   @GetMapping("/articles")
   public Collection<Article> getAllArticles() {
