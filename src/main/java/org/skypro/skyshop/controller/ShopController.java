@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.Collection;
 import java.util.UUID;
 import org.skypro.skyshop.model.article.Article;
+import org.skypro.skyshop.model.basket.BasketItem;
 import org.skypro.skyshop.model.basket.ProductBasket;
 import org.skypro.skyshop.model.product.Product;
 import org.skypro.skyshop.model.search.SearchResult;
@@ -43,6 +44,10 @@ public class ShopController {
     return "Продукт успешно добавлен";
   }
 
+  @GetMapping("/basket")
+  public Collection<BasketItem> getBasket() {
+    return basketService.getUserBasket().getItems();
+  }
 
   @GetMapping("/articles")
   public Collection<Article> getAllArticles() {

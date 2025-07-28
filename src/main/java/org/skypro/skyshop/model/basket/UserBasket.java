@@ -1,5 +1,6 @@
 package org.skypro.skyshop.model.basket;
 
+import java.util.Collection;
 import java.util.List;
 
 public class UserBasket {
@@ -12,5 +13,9 @@ public class UserBasket {
     total = items.stream()
         .mapToInt(item -> item.getCount() * item.getPrice())
         .sum();
+  }
+
+  public Collection<BasketItem> getItems(){
+    return items;
   }
 }
