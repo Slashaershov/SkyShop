@@ -1,0 +1,32 @@
+package org.skypro.skyshop.model.product;
+
+import java.util.UUID;
+import org.springframework.stereotype.Component;
+
+public class SimpleProduct extends Product {
+
+  private final int price;
+
+  public SimpleProduct(String name, int price) {
+    super(name);
+    if (price <= 0) {
+      throw new IllegalArgumentException("cost <= 0");
+    }
+    this.price = price;
+  }
+
+  @Override
+  public int getPrice() {
+    return price;
+  }
+
+  @Override
+  public String toString() {
+    return getName() + ": " + price;
+  }
+
+  @Override
+  public boolean isSpecial() {
+    return false;
+  }
+}
